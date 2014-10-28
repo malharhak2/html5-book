@@ -1,0 +1,19 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css" /> <!-- Sample stylesheet -->
+	<title>My first canvas game</title>
+</head>
+<body>
+	<!-- This is the canvas, in which we will develop our game -->
+	<canvas id="canvas" width="600" height="400"> </canvas>
+	<script>
+		var canvas = document.getElementById('canvas');
+		var ctx = canvas.getContext('2d');
+
+		var img = new Image(); // Creates an image for drawing
+		img.src = "img/html5.png"; // Tells the image what file to load
+
+		ctx.drawImage(img, 50, 50); // Draws our image at the position [50, 50] 
+	</script>
+</body>
+</html>
