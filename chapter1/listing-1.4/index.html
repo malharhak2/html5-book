@@ -1,0 +1,24 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css" /> <!-- Sample stylesheet -->
+	<title>My first canvas game</title>
+</head>
+<body>
+	<!-- This is the canvas, in which we will develop our game -->
+	<canvas id="canvas" width="600" height="400"> </canvas>
+	<script>
+		var canvas = document.getElementById('canvas'); // Get a reference to the canvas
+		var ctx = canvas.getContext('2d'); // Get the drawing context for  using the canvas
+
+		ctx.fillStyle = "blue";
+
+		ctx.save(); // Saves the properties of the ctx
+		ctx.fillStyle = "green";
+		ctx.shadowBlur = 20;
+		ctx.shadowColor = "red";
+		ctx.fillRect (50, 50, 100, 100); // Will draw a green rectangle with red shadow
+		ctx.restore(); // Restores the properties of the ctx as in the last save
+		ctx.fillRect (200, 50, 100, 100); // Will draw a blue rectangle without shadow
+	</script>
+</body>
+</html>

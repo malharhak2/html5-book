@@ -1,0 +1,31 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css" /> <!-- Sample stylesheet -->
+	<title>My first canvas game</title>
+</head>
+<body>
+	<!-- This is the canvas, in which we will develop our game -->
+	<canvas id="canvas" width="600" height="400"> </canvas>
+	<script>
+		var canvas = document.getElementById('canvas'); // Get a reference to the canvas
+		var ctx = canvas.getContext('2d'); // Get the drawing context for  using the canvas
+
+		// Draw a blue rectangle
+		ctx.fillStyle = "blue"; // Sets the color of what we will draw
+		ctx.fillRect(200, 100, 50, 100);
+
+		// Draw a green square with a shadow
+		ctx.fillStyle = "#0f0"; // green in hexadecimal color notation (0 red, full green and 0 blue)
+		ctx.shadowColor = '#000'; // black
+		ctx.shadowBlur = 20; // blur of the shadow
+		ctx.shadowOffsetX = 5; // Position of the shadow
+		ctx.shadowOffsety = 10;
+		ctx.fillRect(100, 50, 100, 100);
+
+		// Draws the outline of a rectangle
+		// Note that unless we change the shadow properties, we will also have a shadow here
+		ctx.strokeStyle = "red"; // Sets the color of our outlines
+		ctx.strokeRect(400, 200, 100, 100);
+	</script>
+</body>
+</html>

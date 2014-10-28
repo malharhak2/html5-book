@@ -1,0 +1,15 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css" /> <!-- Sample stylesheet -->
+	<title>My first canvas game</title>
+</head>
+<body>
+	<!-- This is the canvas, in which we will develop our game -->
+	<canvas id="canvas" width="600" height="400"> </canvas>
+	<script>
+		var canvas = document.getElementById('canvas'); // Get a reference to the canvas
+		var ctx = canvas.getContext('2d'); // Get the drawing context for  using the canvas
+		ctx.fillRect(200, 100, 50, 100);
+	</script>
+</body>
+</html>
